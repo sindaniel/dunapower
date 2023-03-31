@@ -176,3 +176,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+
+
+
+function get_sliders(){
+    
+    $args = [
+        'post_type'=>'products',
+        'order'=>'desc'
+    ];
+   
+    $products = new WP_Query($args);
+    // var_dump($products);
+
+    return $products;
+
+    
+}

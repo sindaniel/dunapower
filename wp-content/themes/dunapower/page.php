@@ -15,24 +15,41 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<section class="promo-primary">
+    <div class="overlay"></div>
+    <picture>
+        <source srcset="<?php echo  get_template_directory_uri() ?>/img/about.jpg" media="(min-width: 992px)"><img class="img-bg" src="<?php echo  get_template_directory_uri() ?>/img/about.jpg" alt="img">
+    </picture>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="align-container">
+                    <div class="align-item">
+                        <h1 class="title"><?php echo the_title() ?></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-			get_template_part( 'template-parts/content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+<section class="section">
+    <div class="container">
+        <div class="row align-items-start">
+           
+            <div class="col-xl-7 offset-xl-1 col-lg-6 offset-lg-1">
+                <h3 class="title"><?php echo  the_title() ?></h3>
+                <div class="description">
+                <?php echo  get_the_content() ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php
-get_sidebar();
+
 get_footer();

@@ -11,24 +11,92 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dunapower' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'dunapower' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'dunapower' ), 'dunapower', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+
+
+
+</main>
+
+<footer class="footer footer--style-2">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
+                    <!-- logo start-->
+                    <div class="footer-logo">
+                        <a class="logo" href="index.html">
+                            <img src="<?php echo  get_template_directory_uri() ?>/img/dunapower2.svg" width="200">
+                        </a>
+                    </div>
+                    <!-- logo end-->
+                    <!-- socials start-->
+                    <nav class="socials-holder">
+                        <ul class="socials-primary">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </nav>
+                    <!-- socials end -->
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <!-- footer contacts start-->
+                    <div class="footer-contacts">
+                        <h4 class="title">Contacto</h4>
+                        
+                        <p class="address"><?php the_field('contacto', 2); ?></p>
+                    </div>
+                    <!-- footer contacts end-->
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <h4 class="title">Company and Links</h4>
+                    <!-- footer nav start-->
+                    <nav class="footer-nav">
+                        <ul class="footer-menu">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Elements</a></li>
+                            <li><a href="#">Case studios</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <!-- footer nav end-->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">               
+        <div class="row">
+            <div class="col-12">
+                <div class="footer-lower">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="copyright">© <?php echo date('Y') ?> Duna Power</p>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- privacy start-->
+                           
+                            <!-- privacy end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <?php wp_footer(); ?>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="<?php echo  get_template_directory_uri() ?>/js/libs.min.js"></script>
+		<!-- scripts-->
+		<script src="<?php echo  get_template_directory_uri() ?>/js/common.min.js"></script>
+
 
 </body>
 </html>

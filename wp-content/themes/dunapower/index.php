@@ -1,57 +1,63 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package dunapower
- */
+<?php get_header() ?>
 
-get_header();
-?>
 
-	<main id="primary" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
+<section class="promo-primary">
+    <div class="overlay"></div>
+    <picture>
+        <source srcset="<?php echo  get_template_directory_uri() ?>/img/about.jpg" media="(min-width: 992px)"><img class="img-bg" src="<?php echo  get_template_directory_uri() ?>/img/about.jpg" alt="img">
+    </picture>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="align-container">
+                    <div class="align-item">
+                        <h1 class="title">Blog</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+<section class="section articles">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-lg-8 col-xl-8">
+                <div class="row">
 
-			endwhile;
 
-			the_posts_navigation();
+                <?php  while ( have_posts() ): the_post(); ?>
 
-		else :
+                    <div class="col-12">
+                        <div class="article-item">
+                         
+                            <div class="article-item__details">
+                                <h3 class="article-item__title"> <a class="article-item__link" href="<?php echo get_permalink() ?>"><?php echo  get_the_title() ?></a></h3>
+                                <p class="article-item__text">  <?php echo get_the_content(false) ?></p>
+                            </div>
+                        </div>
+                    </div>
 
-			get_template_part( 'template-parts/content', 'none' );
+                
+                <?php endwhile; ?>
+                   
+                    
+                </div>
+            </div>
+         
+        </div>
+    </div>
+</section>
 
-		endif;
-		?>
 
-	</main><!-- #main -->
 
-<?php
-get_sidebar();
-get_footer();
+
+
+
+
+
+    
+    <?php get_footer() ?>
