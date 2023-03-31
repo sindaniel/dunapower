@@ -49,18 +49,14 @@
                     <!-- footer contacts end-->
                 </div>
                 <div class="col-xl-3 col-md-6">
-                    <h4 class="title">Company and Links</h4>
+                    <h4 class="title">Menu</h4>
                     <!-- footer nav start-->
                     <nav class="footer-nav">
                         <ul class="footer-menu">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Elements</a></li>
-                            <li><a href="#">Case studios</a></li>
-                            <li><a href="#">Contacts</a></li>
+                            <li><a href="<?php echo get_home_url() ?>">Inicio</a></li>
+                            <li><a href="<?php echo get_home_url() ?>/nosotros">Nosotros</a></li>
+                            <li><a href="<?php echo get_home_url() ?>/blog">Blog</a></li>
+                            <li><a href="<?php echo get_home_url() ?>/contacto">Contacto</a></li>
                         </ul>
                     </nav>
                     <!-- footer nav end-->
