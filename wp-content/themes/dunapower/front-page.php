@@ -19,7 +19,7 @@ $postID = get_the_ID();
             <div class="overlay"></div>
             <div class="bg-holder jarallax">
                 <picture>
-                <source srcset="img/promo-1.jpg" media="(min-width: 992px)"/><img class="img-bg jarallax-img" src="<?php echo the_post_thumbnail_url() ?>" alt="img"/>
+                <img class="img-bg jarallax-img" src="<?php echo the_post_thumbnail_url() ?>" alt="img"/>
                    
                 </picture>
             </div>
