@@ -35,6 +35,7 @@
                         <div class="article-item">
                          
                             <div class="article-item__details">
+                            <img class="" style="width:100%" src="<?php echo the_post_thumbnail_url() ?>" alt="img">
                                 <h3 class="article-item__title"> <a class="article-item__link" href="<?php echo get_permalink() ?>"><?php echo  get_the_title() ?></a></h3>
                                 <p class="article-item__text">  <?php echo get_the_content(false) ?></p>
                             </div>
