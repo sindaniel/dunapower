@@ -159,7 +159,7 @@ $postID = get_the_ID();
                                     
 								<div class="news-item--aside">
 									<div class="img-holder"><img class="img-bg" src="<?php echo the_post_thumbnail_url() ?>" alt="img"></div>
-									<div class="description"><span class="date">October 12, 2019</span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+									<div class="description"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 								</div>
                                 <?php endwhile; ?>
 
